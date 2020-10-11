@@ -1,0 +1,9 @@
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\bin\Debug\netcoreapp3.1\AgileEngineBEServices.deps.json
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\bin\Debug\netcoreapp3.1\AgileEngineBEServices.dll
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.csprojAssemblyReference.cache
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.AssemblyInfoInputs.cache
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.AssemblyInfo.cs
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\bin\Debug\netcoreapp3.1\AgileEngineBEServices.pdb
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.csproj.CoreCompileInputs.cache
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.dll
+C:\Users\Gaston\Desktop\AgileEngine\AgileEngineBEServices\obj\Debug\netcoreapp3.1\AgileEngineBEServices.pdb

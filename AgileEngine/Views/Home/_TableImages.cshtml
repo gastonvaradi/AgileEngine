@@ -1,0 +1,52 @@
+﻿@model List<AgileEngineBEServices.DTOs.PictureDto>
+
+
+<h1>Images</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Img</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @item.id
+                </td>
+                <td>
+                    @item.cropped_picture
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" data-toggle="ajax-modal" data-target="#details" data-url="@Url.Action("ImageDetails",new { id = item.id })">Details</button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<nav aria-label="...">
+    <ul class="pagination">
+        <li class="page-item">
+            <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 1 })" data-ajax-method="get" data-ajax-failure="failed">
+                <button type="submit" class="page-link">1</button>
+            </form>
+        </li>
+        <li class="page-item">
+            <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 2 })" data-ajax-method="get" data-ajax-failure="failed">
+                <button type="submit" class="page-link">2</button>
+            </form>
+        </li>
+        <li class="page-item">
+            <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 3 })" data-ajax-method="get" data-ajax-failure="failed">
+                <button type="submit" class="page-link">3</button>
+            </form>
+        </li>
+    </ul>
+</nav>
+

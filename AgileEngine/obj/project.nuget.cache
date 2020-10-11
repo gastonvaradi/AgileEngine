@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CylLdzRkdnjq8pjCjrVdF4809ZyfTgcv1aHztcrdpNfl8GMBCUQy7g58N0PVlbw+WwDZ0iC9KdUcWvHxnj1Q6A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gaston\\Desktop\\Soluxxione\\AgileEngine\\AgileEngine\\AgileEngine_BE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gaston\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

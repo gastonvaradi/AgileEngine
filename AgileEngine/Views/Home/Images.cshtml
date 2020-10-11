@@ -1,0 +1,118 @@
+﻿@model AgileEngine_BE.Models.ImagesViewModel
+
+<div class="container">
+    <h1>Filter</h1>
+    <hr />
+    <form method="get" data-ajax="true" data-ajax-method="get" data-ajax-mode="replace"
+          data-ajax-update="#images" data-ajax-url="@Url.Action("Search")">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Search.author" class="control-label"></label>
+                    <input asp-for="Search.author" class="form-control" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Search.camera" class="control-label"></label>
+                    <input asp-for="Search.camera" class="form-control" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Search.tags" class="control-label"></label>
+                    <input asp-for="Search.tags" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="Search.cropped_picture" class="control-label"></label>
+                        <input asp-for="Search.cropped_picture" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="Search.full_picture" class="control-label"></label>
+                        <input asp-for="Search.full_picture" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="Search.id" class="control-label"></label>
+                        <input asp-for="Search.id" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<div class="container" id="images">
+    <h1>Images</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Img</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.PicturesList)
+            {
+
+                <tr>
+                    <td>
+                        @item.id
+                    </td>
+                    <td>
+                        @item.cropped_picture
+                    </td>
+                    <td>
+                        <form method="get" data-ajax-update="#details" data-ajax="true" data-ajax-url="@Url.Action("ImageDetails",new { id = item.id })" data-ajax-method="get" data-ajax-failure="failed">
+                            <button type="submit" class="btn btn-danger">Details</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item">
+                <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 1 })" data-ajax-method="get" data-ajax-failure="failed">
+                    <button type="submit" class="page-link">1</button>
+                </form>
+            </li>
+            <li class="page-item">
+                <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 2 })" data-ajax-method="get" data-ajax-failure="failed">
+                    <button type="submit" class="page-link">2</button>
+                </form>
+            </li>
+            <li class="page-item">
+                <form method="get" data-ajax-update="#images" data-ajax="true" data-ajax-url="@Url.Action("GetImages",new { page = 3 })" data-ajax-method="get" data-ajax-failure="failed">
+                    <button type="submit" class="page-link">3</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<div id="details"></div>
+
+
+
